@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<title>My first three.js app</title>
+		
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+	
+	 
+		<p id="demo"></p>
+		<script src="js/three.js"></script>
+		<script>
+		var name = "money";
+			var money;
+			money = 0;
+		
+			
+			var x = 10;
+			var scene = new THREE.Scene();
+			function addlines(){
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(-10, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(0, 10, 0));
+			geometry.vertices.push(new THREE.Vector3(10, 0, 0));
+			var line = new THREE.Line(geometry, material);
+			scene.add(line);
+			
+			
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(0, 2, 0));
+			geometry.vertices.push(new THREE.Vector3(5, 2, 0));
+			geometry.vertices.push(new THREE.Vector3(6, 3, 0));
+			geometry.vertices.push(new THREE.Vector3(10, 30, 0));
+			var line2 = new THREE.Line(geometry, material);
+			scene.add(line2);
+			
+			
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(0, -10, 0));
+			geometry.vertices.push(new THREE.Vector3(0, 0, 10));
+			var line3 = new THREE.Line(geometry, material);
+			scene.add(line3);
+			
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(10, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(-10, 0, 0));
+			var line4 = new THREE.Line(geometry, material);
+			scene.add(line4);
+			
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(0, 2, 0));
+			geometry.vertices.push(new THREE.Vector3(-5, 2, 0));
+			geometry.vertices.push(new THREE.Vector3(-6, 3, 0));
+			geometry.vertices.push(new THREE.Vector3(-10, 30, 0));
+			var line5 = new THREE.Line(geometry, material);
+			scene.add(line5);
+			
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(0, -2, 0));
+			geometry.vertices.push(new THREE.Vector3(5, -2, 0));
+			geometry.vertices.push(new THREE.Vector3(6, -3, 0));
+			geometry.vertices.push(new THREE.Vector3(10, -30, 0));
+			var line6 = new THREE.Line(geometry, material);
+			scene.add(line6);
+			
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(0, -2, 0));
+			geometry.vertices.push(new THREE.Vector3(-5, -2, 0));
+			geometry.vertices.push(new THREE.Vector3(-6, -3, 0));
+			geometry.vertices.push(new THREE.Vector3(-10, -30, 0));
+			var line7 = new THREE.Line(geometry, material);
+			scene.add(line7);
+			
+			var material = new THREE.LineBasicMaterial({ color: 0x0000ff });
+			var geometry = new THREE.Geometry();
+			geometry.vertices.push(new THREE.Vector3(10, 0, 0));
+			geometry.vertices.push(new THREE.Vector3(0, -10, 0));
+			geometry.vertices.push(new THREE.Vector3(-10, 0, 0));
+			//geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			//geometry.vertices.push(new THREE.Vector3(0, 0, 0));
+			var line8 = new THREE.Line(geometry, material);
+			scene.add(line8);
+			
+			}
+			
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+			
+			
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+			var material = new THREE.MeshPhongMaterial( { map: new THREE.TextureLoader().load("image/level.png") } );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var cube2 = new THREE.Mesh( geometry, material );
+			scene.add( cube2 );
+			
+			//var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+		//	var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+		//	var cube3 = new THREE.Mesh( geometry, material );
+		//	scene.add( cube3 );
+			var geometry = new THREE.CylinderGeometry( 1, 1, 0.01, 32 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
+			var circle = new THREE.Mesh( geometry, material );
+			scene.add( circle );
+			
+			var geometry = new THREE.CylinderGeometry( 1, 1, 0.01, 32 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
+			var circle2 = new THREE.Mesh( geometry, material );
+			scene.add( circle2 );
+			
+			
+		
+			camera.position.z = 5;
+			
+			
+			var name = "once";
+			var once;
+			once = true;
+			var render = function () {
+				requestAnimationFrame( render );
+				
+				cube.rotation.x += 0.1;
+				cube.rotation.y += 0.1;
+				cube2.rotation.x += -0.1;
+				cube2.rotation.y += -0.1;
+				circle.rotation.x += 0.1;
+				circle2.rotation.x += 0.1;
+				money+= 1;
+			document.getElementById("demo").innerHTML = money;
+
+				if(once){	
+				//start function
+				circle2.rotation.x = 90;
+				//addlines();
+				circle.position = (1,1,1);
+				cube.position = (3,3,3);
+				once = false;
+				}
+				renderer.render(scene, camera);
+			};
+
+			render();
+		</script>
+		<button onclick="document.getElementById('demoo').addlines()">Click</button>
+	 <p id="demoo"></p>
+	</body>
+</html>
