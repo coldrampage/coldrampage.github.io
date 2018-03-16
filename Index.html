@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+<input id="clickMe" type="button" value="Money" onclick="clickbutton();" /> 
+	<p4 style="color:red;" id="totalcps"></p4>
+	<p1 style="color:red;" id="demo"></p1>
+	 <p2 style="color:red;" id="demoo"></p2>
+	 <p3 style="color:green;" id="demooo"></p3>
+		<script src="js/three.js"></script>
+		<script src="code.js"></script>
+		
+	 <p6 id="demoo"></p6>
+<h2>Buys</h2>
+
+<button class="accordion">Dog</button>
+<div class="panel">
+  <p>
+  <h1 style="color:green;" id="name"></h1>
+<h5 id="description" ></h5>
+<h2 id="dogcps" ></h2>
+<h7 id="alldogcps" ></h7>
+<h3 id="cost" ></h3>
+<h4 id="amount" ></h4>
+<input id="buydog" type="button" value="Buy" onclick="buydoog();" />
+  </p>
+</div>
+
+<button class="accordion">Cat</button>
+<div class="panel">
+  <p>
+   <h8 style="color:green;" id="catname">lol</h8>
+<h9 id="catdescription" ><</h9>
+<h10 id="catcps" >lol</h10>
+<h11 id="allcatcps" >lol</h11>
+<h12 id="catcost" >lol</h12>
+<h13 id="catamount" >lol</h13>
+<input id="buycat" type="button" value="Buy" onclick="buycat();" />
+  </p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>3red</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+		<script src="js/three.js"></script>
+		<script src="code.js"></script>
+</body>
+</html>
