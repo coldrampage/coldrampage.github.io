@@ -8,7 +8,7 @@
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 50%;
     border: none;
     text-align: left;
     outline: none;
@@ -29,7 +29,7 @@
 </style>
 </head>
 <body>
-<input id="clickMe" type="button" value="Money" onclick="clickbutton();" /> 
+<input id="clickMe" type="button" value="Free money" onclick="clickbutton();" /> 
 	<p4 style="color:red;" id="totalcps"></p4>
 	<p1 style="color:red;" id="demo"></p1>
 	 <p2 style="color:red;" id="demoo"></p2>
@@ -38,12 +38,31 @@
 		<script src="code.js"></script>
 		
 	 <p6 id="demoo"></p6>
+	 <br>
+	 <input id="clickMe" type="button" value="More Money" onclick="clickbuttonup();" /> 
+	 	 <p3 style="color:green;" id="upcostdisp"></p3>
+
 <h2>Buys</h2>
+
+<button class="accordion">Mouse</button>
+<div class="panel">
+  <p>
+  <h1 style="color:green;" id="mousename"></h1>
+<img src="https://cdn.shopify.com/s/files/1/1172/9608/products/5560-Mouse-grey.jpeg?v=1464128491" alt="Smiley face" height="256" width="256">
+<h5 id="mousedescription" ></h5>
+<h2 id="mousecps" ></h2>
+<h7 id="allmousecps" ></h7>
+<h3 id="mousecost" ></h3>
+<h4 id="mouseamount" ></h4>
+<input id="buymouse" type="button" value="Buy" onclick="buymouse();" />
+  </p>
+</div>
 
 <button class="accordion">Dog</button>
 <div class="panel">
   <p>
   <h1 style="color:green;" id="name"></h1>
+    <img src="https://pbs.twimg.com/profile_images/948761950363664385/Fpr2Oz35_400x400.jpg" alt="Smiley face" height="256" width="256">
 <h5 id="description" ></h5>
 <h2 id="dogcps" ></h2>
 <h7 id="alldogcps" ></h7>
@@ -56,19 +75,44 @@
 <button class="accordion">Cat</button>
 <div class="panel">
   <p>
-   <h8 style="color:green;" id="catname">lol</h8>
-<h9 id="catdescription" ><</h9>
-<h10 id="catcps" >lol</h10>
-<h11 id="allcatcps" >lol</h11>
-<h12 id="catcost" >lol</h12>
-<h13 id="catamount" >lol</h13>
+  <h1 style="color:green;" id="catname"></h1>
+  <img src="https://lh3.googleusercontent.com/ObdbSatQvNUymufVs3vL5YmhGdvs3w5vvTciaGLFQOZoREVAEIIueioFOrWk9je_fqxR=s256" alt="Smiley face" height="256" width="256">
+<h5 id="catdescription" ></h5>
+<h2 id="catcps" ></h2>
+<h7 id="allcatcps" ></h7>
+<h3 id="catcost" ></h3>
+<h4 id="catamount" ></h4>
+
 <input id="buycat" type="button" value="Buy" onclick="buycat();" />
   </p>
 </div>
 
-<button class="accordion">Section 3</button>
+<button class="accordion">Ninja</button>
 <div class="panel">
-  <p>3red</p>
+  <p>
+  <h1 style="color:green;" id="ninjaname"></h1>
+    <img src="https://alpha.imageserver.cz/hayashi/products/zoom/2/910/454919.jpg" alt="Smiley face" height="256" width="256">
+<h5 id="ninjadescription" ></h5>
+<h2 id="ninjacps" ></h2>
+<h7 id="allninjacps" ></h7>
+<h3 id="ninjacost" ></h3>
+<h4 id="ninjaamount" ></h4>
+<input id="buyninja" type="button" value="Buy" onclick="buyninja();" />
+  </p>
+</div>
+
+<button class="accordion">Bank</button>
+<div class="panel">
+  <p>
+  <h1 style="color:green;" id="bankname"></h1>
+    <img src="http://www.dhakatribune.com/assets/uploads/2017/05/WEB_Bank_Bigstock_edited-1024x677.jpg" alt="Smiley face" height="256" width="256">
+<h5 id="bankdescription" ></h5>
+<h2 id="bankcps" ></h2>
+<h7 id="allbankcps" ></h7>
+<h3 id="bankcost" ></h3>
+<h4 id="bankamount" ></h4>
+<input id="buybank" type="button" value="Buy" onclick="buybank();" />
+  </p>
 </div>
 
 <script>
