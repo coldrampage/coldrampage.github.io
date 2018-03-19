@@ -20,6 +20,46 @@
         camera.position.z += 0.1
     }
 });
+
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/(window.innerHeight-200), 0.1, 1000 );
+			
+			
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight-200 );
+			document.body.appendChild( renderer.domElement );
+			//var material = new THREE.MeshPhongMaterial( { map: new THREE.TextureLoader().load("image/level.png") } );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var cube2 = new THREE.Mesh( geometry, material );
+			scene.add( cube2 );
+			
+			var geometry = new THREE.BoxGeometry( 5, 5, 0.1 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ffff } );
+			var cube3 = new THREE.Mesh( geometry, material );
+			scene.add( cube3 );
+			cube3.position.set = (2,1,-5);
+			camera.position.z = 5;
+			
+			var render = function () {
+				requestAnimationFrame( render );
+				
+				cube.rotation.x += 0.1;
+				cube.rotation.y += 0.1;
+				cube2.rotation.x -= 0.1;
+				cube2.rotation.y -= 0.1;
+				money+= mousenum*mouse;
+				moneydisp = Math.round(money)
+			
+				}
+				renderer.render(scene, camera);
+			};
+
+			render();
+
 </script>
+		
 </body>
 </html>
