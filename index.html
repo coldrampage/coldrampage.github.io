@@ -20,23 +20,6 @@
         camera.position.z += 0.1
     }
 });
-var loader = new THREE.FontLoader();
-
-loader.load( 'fonts/gentilis_regular.typeface.json', function ( font ) {
-
-	var geometry = new THREE.TextGeometry( 'Hello three.js!', {
-		font: undefined,
-		size: 80,
-		height: 5,
-		curveSegments: 12,
-		bevelEnabled: true,
-		bevelThickness: 10,
-		bevelSize: 8,
-		bevelSegments: 5
-	} );
-} );
-
 </script>
-		
 </body>
 </html>
